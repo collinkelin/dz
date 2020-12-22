@@ -5,7 +5,7 @@
       <paths name="点赞">
         <serverdata>
           <mappings>
-            <mapping deploy="/www/wwwroot/dzxts" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/www/wwwroot" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

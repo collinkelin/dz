@@ -144,6 +144,9 @@ class UsersModel extends Model{
 		$insertUsers = $this->allowField(true)->save($param);
 		if(!$insertUsers) return '添加失败';
 		$insertId = $this->id;
+        //更新新的邀请码
+        $up_idcode = str_pad($insertId,5,"0",STR_PAD_LEFT);
+        model('Users')->where('id',$insertId)->update(['idcode'=>$up_idcode,'uid'=>$up_idcode]);
 
 		//将该账户添加至user_total表
 		$userTotal = model('UserTotal');
